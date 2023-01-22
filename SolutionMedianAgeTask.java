@@ -27,7 +27,7 @@ public class SolutionMedianAgeTask {
 
         HashMap <String, ArrayList<Integer>> carsAgeInRegions = new HashMap<>();
         HashSet <String> keysForCarAgeMap = new HashSet<>();
-        HashMap <String, Integer> mediumAgeCarsInRegions = new HashMap<>();
+        HashMap <String, Integer> medianAgeCarsInRegions = new HashMap<>();
 
         for (int i = 0; i < listCars.size(); i++) {
             String number = listCars.get(i).getIdNumber().substring(3);
@@ -36,25 +36,20 @@ public class SolutionMedianAgeTask {
 
         for (String regNum: keysForCarAgeMap){
             ArrayList <Integer> yearsList = new ArrayList<>();
-            int countCars = 0;
-            int sumAgeRelease = 0;
-            int mediumAge = 0;
             for (int i = 0; i < listCars.size(); i++) {
                 if (regNum.equals(listCars.get(i).getIdNumber().substring(3))){
                     yearsList.add(listCars.get(i).getYearRelease());
-                    ++countCars;
-                    sumAgeRelease = sumAgeRelease + listCars.get(i).getYearRelease();
                 }
             }
             Collections.sort(yearsList);
             carsAgeInRegions.put(regNum, yearsList);
             int medianPosition = yearsList.size() / 2;
             int medianAgeRelease = yearsList.size() % 2 == 0 ? yearsList.get(medianPosition + 1) : yearsList.get(medianPosition);
-            mediumAgeCarsInRegions.put(regNum, medianAgeRelease);
+            medianAgeCarsInRegions.put(regNum, medianAgeRelease);
         }
         System.out.print("Всего машин в регионе по годам выпуска: ");
         System.out.println(carsAgeInRegions);
         System.out.print("Средний год выпуска в регионе: ");
-        System.out.println(mediumAgeCarsInRegions);
+        System.out.println(medianAgeCarsInRegions);
     }
 }
