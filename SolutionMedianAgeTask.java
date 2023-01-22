@@ -17,11 +17,6 @@ public class SolutionMedianAgeTask {
         Car car6 = new Car(2012, "qwe73");
         Car car7 = new Car(2013, "qwe01");
 
-        // Автомобили рассортированы правильно, если:
-        // 73 = [1980, 2017, 2012]
-        // 01 = [2001, 2009, 2013]
-        // 12 = [2020]
-
         listCars.add(car1);
         listCars.add(car2);
         listCars.add(car3);
