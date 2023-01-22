@@ -49,7 +49,7 @@ public class SolutionMedianAgeTask {
         }
         System.out.print("Всего машин в регионе по годам выпуска: ");
         System.out.println(carsAgeInRegions);
-        System.out.print("Средний год выпуска в регионе: ");
+        System.out.print("Медианный год выпуска автомобилей в каждом регионе: ");
         System.out.println(medianAgeCarsInRegions);
     }
 }
