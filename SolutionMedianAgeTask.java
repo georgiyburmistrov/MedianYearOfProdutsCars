@@ -84,10 +84,6 @@ public class SolutionMedianAgeTask {
 
         List <Car> listCars = Arrays.asList(car1, car2, car3, car4, car5, car6, car7, car8);
 
-        // Автомобили рассортированы правильно, если:
-        // 73 = [1980, 2017, 2012]
-        // 01 = [2001, 2009, 2013]
-        // 12 = [2020]
         if (listCars.size() == 0){
             System.out.println("Список автомобилей пуст.");
             System.exit(0);
@@ -101,11 +97,3 @@ public class SolutionMedianAgeTask {
         System.out.println(medianAgeCarsInRegions);
         }
     }
-
-/* с использованием .groupBy()
-
-    Map <String, List <Car>> carsYearsReleaseList = listCars.stream().collect(Collectors.groupingBy(Car::getIdNumber));
-        System.out.println(carsYearsReleaseList);
-        int medianPosition = yearsList.size() / 2;
-
- */
